@@ -22,12 +22,12 @@ module.exports = {
     },
 
     postCreateUser: (req, res) => {
-        const { name, age } = req.body
+        const { product, quantity, totalPrice } = req.body
 
         const newUser = {
             id: uuidv4(),
-            name,
-            age
+         product,quantity,totalPrice
+            
         }
 
         users.push(newUser)

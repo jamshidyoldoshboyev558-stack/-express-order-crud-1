@@ -1,5 +1,2 @@
-module.exports = {
-    id: 1,
-    name: "Ali",
-    age: 20
-}
+let users=[]
+module.exports=users
