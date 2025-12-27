@@ -11,7 +11,7 @@ module.exports = {
     },
 
     getOneUser: (req, res) => {
-        const idParam = req.params.userID
+        const idParam = req.params.id
         const user = users.find(u => u.id == idParam)
 
         if (!user) {
@@ -35,8 +35,8 @@ module.exports = {
     },
 
     putUpdateUser: (req, res) => {
-        const idParam = req.params.userID
-        const { name, age } = req.body
+        const idParam = req.params.id
+        const { product,quantity, totalPrice} = req.body
 
         const user = users.find(u => u.id == idParam)
 
@@ -44,8 +44,9 @@ module.exports = {
             return res.status(404).send("User not found")
         }
 
-        user.name = name ?? user.name
-        user.age = age ?? user.age
+        user.product =product||user.product
+        user.quantity=quantity||user.quantity
+        user.totalPrice=totalPrice||user.totalPrice
 
         res.json(user)
     },
