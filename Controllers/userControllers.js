@@ -52,7 +52,7 @@ module.exports = {
     },
 
     deleteUser: (req, res) => {
-        const idParam = req.params.userID
+        const idParam = req.params.id
 
         const index = users.findIndex(u => u.id == idParam)
 
