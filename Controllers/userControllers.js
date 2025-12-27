@@ -1,5 +1,5 @@
 const { v4: uuidv4 } = require("uuid")
-let users = require("../Database/userDB")
+let users = require("../database/userDatabase")
 
 module.exports = {
     getHome: (req, res) => {
